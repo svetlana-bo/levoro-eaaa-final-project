@@ -1,0 +1,279 @@
+/* Neulis Sans font */
+@font-face {
+  font-family: 'Neulis Sans';
+  src: url('/fonts/NeulisSans-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neulis Sans';
+  src: url('/fonts/NeulisSans-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Neulis Sans';
+  src: url('/fonts/NeulisSans-SemiBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 14% 98%;
+    --foreground: 0 0% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+
+    --primary: 213 52% 25%;
+    --primary-foreground: 0 0% 100%;
+    --footer-link-hover: 33 80% 87%;
+
+    --secondary: 43 66% 52%;
+    --secondary-foreground: 213 52% 25%;
+
+    --muted: 40 10% 94%;
+    --muted-foreground: 0 0% 33%;
+
+    --accent: 43 66% 52%;
+    --accent-foreground: 213 52% 25%;
+
+    --destructive: 0 51% 46%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 43 66% 52%;
+    --warning-foreground: 213 52% 25%;
+
+    --success: 147 33% 37%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 40 10% 90%;
+    --input: 40 10% 90%;
+    --ring: 43 66% 52%;
+
+    --radius: 0.75rem;
+    --navbar-height: 5rem;
+
+    --sidebar-soft: 213 51% 28%;
+    --sidebar-background: 213 51% 28%;
+    --sidebar-foreground: 40 14% 94%;
+    --sidebar-primary: 35 89% 76%;
+    --sidebar-primary-foreground: 213 52% 25%;
+    --sidebar-accent: 213 51% 36%;
+    --sidebar-accent-foreground: 40 14% 94%;
+    --sidebar-border: 213 51% 22%;
+    --sidebar-ring: 35 89% 76%;
+
+    --gold: 43 66% 52%;
+    --gold-light: 35 84% 87%;
+    --navy: 213 52% 25%;
+    --navy-dark: 213 52% 17%;
+    --apricot: 35 89% 76%;
+    --slate-blue: 215 23% 47%;
+    --cool-mist: 215 24% 65%;
+  }
+
+  .dark {
+    --background: 213 52% 6%;
+    --foreground: 40 14% 94%;
+    --card: 213 52% 10%;
+    --card-foreground: 40 14% 94%;
+    --popover: 213 52% 10%;
+    --popover-foreground: 40 14% 94%;
+    --primary: 43 66% 52%;
+    --primary-foreground: 213 52% 15%;
+    --secondary: 213 52% 22%;
+    --secondary-foreground: 40 14% 94%;
+    --muted: 213 30% 15%;
+    --muted-foreground: 213 28% 65%;
+    --accent: 43 66% 52%;
+    --accent-foreground: 213 52% 15%;
+    --destructive: 0 51% 46%;
+    --destructive-foreground: 40 14% 98%;
+    --warning: 43 66% 52%;
+    --warning-foreground: 213 52% 15%;
+    --success: 147 33% 37%;
+    --success-foreground: 0 0% 100%;
+    --border: 213 30% 18%;
+    --input: 213 30% 18%;
+    --ring: 43 66% 52%;
+    --sidebar-soft: 213 51% 28%;
+    --sidebar-background: 213 51% 28%;
+    --sidebar-foreground: 40 14% 94%;
+    --sidebar-primary: 35 89% 76%;
+    --sidebar-primary-foreground: 213 52% 15%;
+    --sidebar-accent: 213 51% 36%;
+    --sidebar-accent-foreground: 40 14% 94%;
+    --sidebar-border: 213 51% 22%;
+    --sidebar-ring: 35 89% 76%;
+    --apricot: 35 89% 76%;
+    --slate-blue: 215 23% 47%;
+    --cool-mist: 215 24% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html, body, #root {
+    @apply bg-background text-foreground;
+    font-family: 'Neulis Sans', 'Inter', system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Neulis Sans', 'Space Grotesk', sans-serif;
+    font-weight: 700;
+  }
+}
+
+/* Mesh gradient animation */
+@keyframes meshMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.mesh-gradient {
+  background-color: hsl(var(--background));
+  background-image:
+    radial-gradient(at 77% 24%, hsl(215 23% 47% / 0.8) 0px, transparent 50%),
+    radial-gradient(at 29% 76%, hsl(35 90% 75% / 0.6) 0px, transparent 50%);
+  background-size: 200% 200%;
+  animation: meshMove 9s ease infinite;
+  will-change: background-position;
+  transform: translateZ(0);
+}
+
+/* Static mesh variants — same palette as .mesh-gradient, no animation */
+.mesh-gradient-static {
+  background-color: hsl(var(--background));
+  background-image:
+    radial-gradient(at 80% 20%, hsl(215 23% 47% / 0.7) 0px, transparent 55%),
+    radial-gradient(at 20% 80%, hsl(35 90% 75% / 0.55) 0px, transparent 55%);
+}
+
+.mesh-gradient-static-alt {
+  background-color: hsl(var(--background));
+  background-image:
+    radial-gradient(at 15% 25%, hsl(215 23% 47% / 0.65) 0px, transparent 55%),
+    radial-gradient(at 85% 75%, hsl(35 90% 75% / 0.6) 0px, transparent 55%);
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: hsl(var(--card) / 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid hsl(var(--border) / 0.5);
+}
+
+/* Gold gradient text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, hsl(43 66% 52%), hsl(35 84% 87%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Marker-style text highlight (warm gold) */
+.text-highlight {
+  background-image: linear-gradient(transparent 60%, hsl(var(--gold) / 0.35) 60%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding: 0 0.15em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+@layer utilities {
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+  .overflow-wrap-anywhere {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* Heading spacing for rendered lesson/blog content */
+.prose h1 { margin-top: 1.5em; margin-bottom: 0.5em; }
+.prose h2 { margin-top: 1.25em; margin-bottom: 0.4em; }
+.prose h3 { margin-top: 1em; margin-bottom: 0.35em; }
+.prose h4 { margin-top: 0.75em; margin-bottom: 0.25em; }
+
+/* dashboard-sidebar-offset is no longer needed — sidebar.tsx handles navbar spacing natively */
+
+/* Course preview card details: default to platform foreground.
+   Authored inline colors on nested elements still win. */
+.course-card-details > * {
+  color: hsl(var(--foreground));
+}
+
+/* Lesson learner-view rich text — explicit rules so player matches editor.
+   Avoids Tailwind Typography (`prose`) defaults that fight contentEditable. */
+.lesson-rich-text { color: inherit; }
+
+.lesson-rich-text h1 { font-size: 2rem; font-weight: 700; margin: 1.5em 0 0.5em; color: hsl(var(--primary)); }
+.lesson-rich-text h2 { font-size: 1.5rem; font-weight: 700; margin: 1.25em 0 0.4em; color: hsl(var(--primary)); }
+.lesson-rich-text h3 { font-size: 1.17rem; font-weight: 600; margin: 1em 0 0.35em; color: hsl(var(--primary)); }
+.lesson-rich-text h4 { font-size: 1.05rem; font-weight: 600; margin: 0.75em 0 0.25em; color: hsl(var(--primary)); }
+.lesson-rich-text h5 { font-size: 1rem; font-weight: 700; margin: 0.6em 0 0.2em; color: hsl(var(--primary)); }
+.lesson-rich-text h6 { font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin: 0.5em 0 0.2em; color: hsl(var(--primary)); }
+
+.lesson-rich-text > p { margin: 0 0 0.5rem; }
+.lesson-rich-text > div { margin-bottom: 0.5rem; }
+.lesson-rich-text > p:empty,
+.lesson-rich-text > p:has(> br:only-child) { min-height: 1em; }
+
+.lesson-rich-text a { color: hsl(var(--primary)); text-decoration: underline; }
+.lesson-rich-text a:hover { color: hsl(var(--primary) / 0.8); }
+
+.lesson-rich-text hr { margin: 1rem 0; border-color: hsl(var(--border)); }
+
+.lesson-rich-text img { max-width: 100%; border-radius: 0.5rem; }
+.lesson-rich-text img[style*="float:left"],
+.lesson-rich-text img[style*="float: left"],
+.lesson-rich-text img[style*="float:right"],
+.lesson-rich-text img[style*="float: right"] { display: inline; }
+.lesson-rich-text::after { content: ""; display: table; clear: both; }
+
+/* Lists — deterministic spacing & nested style cascade */
+.lesson-rich-text ul,
+.lesson-rich-text ol { padding-left: 1.5rem; margin: 0 0 0.5rem; }
+.lesson-rich-text ul { list-style: disc; }
+.lesson-rich-text ul ul { list-style: circle; }
+.lesson-rich-text ul ul ul { list-style: square; }
+.lesson-rich-text ol { list-style: decimal; }
+.lesson-rich-text ol ol { list-style: lower-alpha; }
+.lesson-rich-text ol ol ol { list-style: lower-roman; }
+
+.lesson-rich-text li { margin: 0; padding: 0; }
+.lesson-rich-text li > p,
+.lesson-rich-text li > div { margin: 0; display: inline; }
+.lesson-rich-text li > ul,
+.lesson-rich-text li > ol { margin: 0; }
+
+
+/* Respect user motion preferences (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

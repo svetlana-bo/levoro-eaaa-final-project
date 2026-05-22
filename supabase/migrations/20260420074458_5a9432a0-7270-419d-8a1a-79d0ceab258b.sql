@@ -1,0 +1,1 @@
+CREATE POLICY "Students can delete own progress" ON public.lesson_progress FOR DELETE TO authenticated USING (auth.uid() = student_id);

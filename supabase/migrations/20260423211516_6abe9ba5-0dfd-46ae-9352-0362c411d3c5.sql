@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX IF NOT EXISTS transactions_stripe_invoice_id_key ON public.transactions (stripe_invoice_id) WHERE stripe_invoice_id IS NOT NULL;

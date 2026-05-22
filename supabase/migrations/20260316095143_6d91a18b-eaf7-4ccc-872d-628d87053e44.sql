@@ -1,0 +1,1 @@
+ALTER TABLE public.lessons ADD COLUMN exercises jsonb DEFAULT '[]'::jsonb;

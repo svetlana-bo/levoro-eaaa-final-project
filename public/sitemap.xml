@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://levoro.academy/</loc><priority>1.0</priority></url>
+  <url><loc>https://levoro.academy/courses</loc><priority>0.9</priority></url>
+  <url><loc>https://levoro.academy/memberships</loc><priority>0.9</priority></url>
+  <url><loc>https://levoro.academy/about</loc><priority>0.7</priority></url>
+  <url><loc>https://levoro.academy/teach</loc><priority>0.7</priority></url>
+  <url><loc>https://levoro.academy/business</loc><priority>0.7</priority></url>
+  <url><loc>https://levoro.academy/faq</loc><priority>0.6</priority></url>
+  <url><loc>https://levoro.academy/blog</loc><priority>0.6</priority></url>
+  <url><loc>https://levoro.academy/contact</loc><priority>0.5</priority></url>
+  <url><loc>https://levoro.academy/partnerships</loc><priority>0.5</priority></url>
+  <url><loc>https://levoro.academy/privacy</loc><priority>0.3</priority></url>
+  <url><loc>https://levoro.academy/terms</loc><priority>0.3</priority></url>
+  <url><loc>https://levoro.academy/accessibility</loc><priority>0.3</priority></url>
+  <url><loc>https://levoro.academy/design-system</loc><priority>0.3</priority></url>
+</urlset>

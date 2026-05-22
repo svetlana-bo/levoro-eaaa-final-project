@@ -1,0 +1,1 @@
+ALTER TABLE public.saved_queries ADD COLUMN system_key text UNIQUE;

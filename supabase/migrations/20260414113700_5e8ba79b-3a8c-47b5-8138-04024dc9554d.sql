@@ -1,0 +1,2 @@
+INSERT INTO public.knowledge_base_articles (title, content_type, custom_key, sort_order, is_published, content)
+VALUES ('Microlearning and Adult Learning Principles', 'custom', 'microlearning', 1, true, '');

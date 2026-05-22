@@ -1,0 +1,1 @@
+ALTER TABLE public.marketing_emails ADD COLUMN IF NOT EXISTS body_blocks jsonb NOT NULL DEFAULT '[]'::jsonb;

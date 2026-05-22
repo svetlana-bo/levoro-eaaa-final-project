@@ -1,0 +1,1 @@
+ALTER TABLE public.profiles ADD COLUMN invite_sent boolean NOT NULL DEFAULT true;

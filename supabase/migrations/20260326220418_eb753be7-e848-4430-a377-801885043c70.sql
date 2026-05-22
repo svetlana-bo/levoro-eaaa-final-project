@@ -1,0 +1,1 @@
+ALTER TABLE public.courses ADD COLUMN certificate_enabled boolean NOT NULL DEFAULT false;

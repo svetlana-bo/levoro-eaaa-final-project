@@ -1,0 +1,1 @@
+ALTER TABLE public.popups ADD COLUMN input_border_color text NOT NULL DEFAULT '#D1D5DB';

@@ -1,0 +1,1 @@
+ALTER TABLE public.saved_queries ADD COLUMN IF NOT EXISTS target_page text DEFAULT NULL;

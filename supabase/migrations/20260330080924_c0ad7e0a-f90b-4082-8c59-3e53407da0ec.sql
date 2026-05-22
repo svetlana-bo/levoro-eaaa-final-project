@@ -1,0 +1,1 @@
+UPDATE marketing_emails SET subject = title WHERE trim(subject) = '';

@@ -1,0 +1,1 @@
+ALTER TABLE public.membership_plans ADD COLUMN trial_days integer NOT NULL DEFAULT 0;

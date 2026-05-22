@@ -1,0 +1,1 @@
+UPDATE email_flow_runs SET wait_until = now() WHERE status = 'waiting';

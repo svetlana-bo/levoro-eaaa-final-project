@@ -1,0 +1,2 @@
+INSERT INTO public.knowledge_base_articles (title, content, content_type, custom_key, sort_order, is_published)
+VALUES ('Whiteboard Animations Guidelines', '', 'custom', 'whiteboard-animations', 11, true);

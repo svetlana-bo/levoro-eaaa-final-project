@@ -1,0 +1,40 @@
+project_id = "scxzdhoaclusxlncjazm"
+
+[functions.auth-email-webhook]
+verify_jwt = false
+
+[functions.get-user-emails]
+verify_jwt = false
+
+[functions.extract-h5p-content]
+verify_jwt = false
+
+[functions.verify-turnstile]
+verify_jwt = false
+
+[functions.send-marketing-email]
+verify_jwt = false
+
+[functions.handle-resend-webhook]
+verify_jwt = false
+
+[functions.evaluate-email-flows]
+verify_jwt = false
+
+[functions.get-site-analytics]
+verify_jwt = false
+
+[functions.handle-unsubscribe]
+verify_jwt = false
+
+[functions.create-checkout]
+verify_jwt = false
+
+[functions.check-subscription]
+verify_jwt = false
+
+[functions.customer-portal]
+verify_jwt = false
+
+[functions.sync-stripe-transactions]
+verify_jwt = false

@@ -1,0 +1,1 @@
+ALTER TABLE public.site_images ADD COLUMN alt_text text NOT NULL DEFAULT '';
